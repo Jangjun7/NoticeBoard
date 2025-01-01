@@ -1,0 +1,93 @@
+.container{
+    width: 90%;          /* 고정된 500px 대신 90%로 변경 */
+    max-width: 500px;    /* 최대 너비 500px로 제한 */
+    height: auto;        /* 높이를 자동으로 설정 */
+    min-height: 280px;   /* 최소 높이 설정 */
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 197);
+    padding: 0px 15px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    background: url("/images/LoginBackground.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input{
+    width: 100%;        /* 가로폭을 100%로 설정 */
+    height: 36px;
+    margin-bottom: 20px;
+    background-color: #fff9e9;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.btnLogin, .btnRegister{
+    width: 100%;        /* 버튼도 100%로 확장 */
+    max-width: 200px;   /* 최대 너비를 200px로 설정 */
+    height: 40px;
+    border-radius: 20px;
+    background-color: #373f3c;
+    border: 1px solid black;
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+i{
+    font-size: 25px;
+    color: rgb(116, 116, 116);
+}
+
+/* 미디어 쿼리: 화면 크기가 768px 이하일 경우 */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;  /* 화면이 작을 때 상자의 너비를 95%로 조정 */
+        height: auto;
+    }
+
+    p {
+        font-size: 24px; /* 텍스트 크기 축소 */
+    }
+
+    input, .btnLogin, .btnRegister {
+        width: 100%;   /* 모든 요소의 너비를 100%로 설정 */
+    }
+
+    .btnLogin, .btnRegister {
+        max-width: 100%; /* 버튼 최대 너비를 100%로 */
+    }
+}
+
+/* 미디어 쿼리: 화면 크기가 480px 이하일 경우 */
+@media (max-width: 480px) {
+    p {
+        font-size: 20px;  /* 텍스트 크기를 더 작게 조정 */
+    }
+
+    .container {
+        padding: 10px;    /* 작은 화면에서는 패딩을 줄여서 공간을 더 확보 */
+    }
+
+    .btnLogin, .btnRegister {
+        height: 35px;  /* 버튼의 높이를 약간 줄임 */
+    }
+}
